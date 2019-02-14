@@ -4,8 +4,8 @@ import { StyleSheet, Text } from "react-native";
 const styles = StyleSheet.create({
     welcome: {
         color: "red",
-        marginBottom: 5,
-        textAlign: "center"
+          marginBottom: 5,
+      textAlign: "center"
     },
 })
 
