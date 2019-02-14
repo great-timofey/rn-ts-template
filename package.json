@@ -1,0 +1,52 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "watch": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "tsc && tslint --fix -p tsconfig.json -c tslint.json",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "reset-paths": "watchman watch-del-all && yarn start --reset-cache",
+    "clean": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start --reset-cache"
+  },
+  "dependencies": {
+    "react": "16.7.0",
+    "react-native": "0.58.3"
+  },
+  "devDependencies": {
+    "@types/jest": "23.3.13",
+    "@types/react": "16.8.1",
+    "@types/react-native": "0.57.32",
+    "@types/react-test-renderer": "16.0.3",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "jest": "24.0.0",
+    "prettier": "1.16.3",
+    "react-test-renderer": "16.7.0",
+    "ts-jest": "23.10.5",
+    "tslint": "5.12.1",
+    "tslint-config-prettier": "1.17.0",
+    "typescript": "3.3.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.(jsx?)$": "./node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "./tsconfig.jest.json"
+      }
+    }
+  }
+}
