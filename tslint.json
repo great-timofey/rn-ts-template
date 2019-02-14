@@ -1,9 +1,7 @@
 {
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rules": {
     "interface-name": false,
-    "semicolon": [true, "never"],
-    "quotemark": [true, "single"],
     "object-literal-sort-keys": false
-  },
-  "extends": ["tslint:recommended", "tslint-config-prettier"]
+  }
 }
